@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+</head>
+<body>
+
+<h1>Hola Mundo, te quiero</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th>Fecha de Registro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="contacto : ${contactos}">
+            <td th:text="${contacto.id}"></td>
+            <td th:text="${contacto.nombre}"></td>
+            <td th:text="${contacto.fechaNacimiento}"></td>
+            <td th:text="${contacto.celular}"></td>
+            <td th:text="${contacto.email}"></td>
+            <td th:text="${contacto.fechaRegistro}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
